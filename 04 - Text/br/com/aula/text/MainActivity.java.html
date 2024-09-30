@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>MainActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">br</span><span class="s2">.</span><span class="s1">com</span><span class="s2">.</span><span class="s1">aula</span><span class="s2">.</span><span class="s1">text</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">os</span><span class="s2">.</span><span class="s1">Bundle</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">View</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">widget</span><span class="s2">.</span><span class="s1">TextView</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">activity</span><span class="s2">.</span><span class="s1">EdgeToEdge</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">appcompat</span><span class="s2">.</span><span class="s1">app</span><span class="s2">.</span><span class="s1">AppCompatActivity</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">core</span><span class="s2">.</span><span class="s1">graphics</span><span class="s2">.</span><span class="s1">Insets</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">core</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">ViewCompat</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">core</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">WindowInsetsCompat</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">com</span><span class="s2">.</span><span class="s1">google</span><span class="s2">.</span><span class="s1">android</span><span class="s2">.</span><span class="s1">material</span><span class="s2">.</span><span class="s1">textfield</span><span class="s2">.</span><span class="s1">TextInputEditText</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">text</span><span class="s2">.</span><span class="s1">DecimalFormat</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">MainActivity </span><span class="s0">extends </span><span class="s1">AppCompatActivity </span><span class="s2">{</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">Bundle savedInstanceState</span><span class="s2">) {</span>
+        <span class="s0">super</span><span class="s2">.</span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState</span><span class="s2">);</span>
+        <span class="s1">EdgeToEdge</span><span class="s2">.</span><span class="s1">enable</span><span class="s2">(</span><span class="s0">this</span><span class="s2">);</span>
+        <span class="s1">setContentView</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">activity_main</span><span class="s2">);</span>
+        <span class="s1">ViewCompat</span><span class="s2">.</span><span class="s1">setOnApplyWindowInsetsListener</span><span class="s2">(</span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">main</span><span class="s2">), (</span><span class="s1">v</span><span class="s2">, </span><span class="s1">insets</span><span class="s2">) </span><span class="s1">-&gt; </span><span class="s2">{</span>
+            <span class="s1">Insets systemBars </span><span class="s2">= </span><span class="s1">insets</span><span class="s2">.</span><span class="s1">getInsets</span><span class="s2">(</span><span class="s1">WindowInsetsCompat</span><span class="s2">.</span><span class="s1">Type</span><span class="s2">.</span><span class="s1">systemBars</span><span class="s2">());</span>
+            <span class="s1">v</span><span class="s2">.</span><span class="s1">setPadding</span><span class="s2">(</span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">left</span><span class="s2">, </span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">top</span><span class="s2">, </span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">right</span><span class="s2">, </span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">bottom</span><span class="s2">);</span>
+            <span class="s0">return </span><span class="s1">insets</span><span class="s2">;</span>
+        <span class="s2">});</span>
+    <span class="s2">}</span>
+
+
+    <span class="s0">public void </span><span class="s1">calculaImc</span><span class="s2">(</span><span class="s1">View view</span><span class="s2">){</span>
+        <span class="s1">TextInputEditText campoNome </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">textinputNome</span><span class="s2">);</span>
+        <span class="s1">TextInputEditText campoSexo </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">textInputSexo</span><span class="s2">);</span>
+        <span class="s1">TextInputEditText campoPeso </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">textInputPeso</span><span class="s2">);</span>
+        <span class="s1">TextInputEditText campoAltura </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">textinputAltura</span><span class="s2">);</span>
+
+        <span class="s1">TextView resultado1 </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">textResultado1</span><span class="s2">);</span>
+        <span class="s1">TextView resultado2 </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">textResultado2</span><span class="s2">);</span>
+
+        <span class="s3">// Cria as variaveis e converte em string</span>
+        <span class="s1">String nome </span><span class="s2">= </span><span class="s1">campoNome</span><span class="s2">.</span><span class="s1">getText</span><span class="s2">().</span><span class="s1">toString</span><span class="s2">();</span>
+        <span class="s1">String peso </span><span class="s2">= </span><span class="s1">campoPeso</span><span class="s2">.</span><span class="s1">getText</span><span class="s2">().</span><span class="s1">toString</span><span class="s2">();</span>
+        <span class="s1">String altura </span><span class="s2">= </span><span class="s1">campoAltura</span><span class="s2">.</span><span class="s1">getText</span><span class="s2">().</span><span class="s1">toString</span><span class="s2">();</span>
+
+        <span class="s3">//Converter os dados Peso e altura em numerico e calcula imc</span>
+        <span class="s1">Double numPeso </span><span class="s2">= </span><span class="s1">Double</span><span class="s2">.</span><span class="s1">parseDouble</span><span class="s2">(</span><span class="s1">peso</span><span class="s2">);</span>
+        <span class="s1">Double numAltura </span><span class="s2">= </span><span class="s1">Double</span><span class="s2">.</span><span class="s1">parseDouble</span><span class="s2">(</span><span class="s1">altura</span><span class="s2">);</span>
+        <span class="s1">Double numImc </span><span class="s2">=  </span><span class="s1">numPeso</span><span class="s2">/(</span><span class="s1">numAltura</span><span class="s2">*</span><span class="s1">numAltura</span><span class="s2">);</span>
+
+        <span class="s3">// Cria a string imc para apresentar o resultado:</span>
+        <span class="s1">String imc </span><span class="s2">= </span><span class="s1">String</span><span class="s2">.</span><span class="s1">valueOf</span><span class="s2">(</span><span class="s1">numImc</span><span class="s2">);</span>
+
+        <span class="s3">// Formata o nosso imc em duas casas decimais</span>
+
+        <span class="s1">DecimalFormat df </span><span class="s2">= </span><span class="s0">new </span><span class="s1">DecimalFormat</span><span class="s2">(</span><span class="s4">&quot;##.##&quot;</span><span class="s2">);</span>
+        <span class="s1">imc </span><span class="s2">= </span><span class="s1">df</span><span class="s2">.</span><span class="s1">format</span><span class="s2">(</span><span class="s1">numImc</span><span class="s2">);</span>
+
+
+        <span class="s1">resultado1</span><span class="s2">.</span><span class="s1">setText</span><span class="s2">(</span><span class="s1">imc</span><span class="s2">);</span>
+
+        <span class="s1">String classificacao</span><span class="s2">;</span>
+
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">campoSexo </span><span class="s2">!= </span><span class="s0">null</span><span class="s2">) {</span>
+            <span class="s1">String sexo </span><span class="s2">= </span><span class="s1">campoSexo</span><span class="s2">.</span><span class="s1">getText</span><span class="s2">().</span><span class="s1">toString</span><span class="s2">();</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">sexo</span><span class="s2">.</span><span class="s1">equals</span><span class="s2">(</span><span class="s4">&quot;Masculino&quot;</span><span class="s2">)){</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">numImc </span><span class="s2">&lt; </span><span class="s5">18.5</span><span class="s2">){</span>
+                <span class="s1">classificacao </span><span class="s2">= </span><span class="s4">&quot;Abaixo do peso&quot;</span><span class="s2">;</span>
+            <span class="s2">} </span><span class="s0">else if </span><span class="s2">(</span><span class="s1">numImc </span><span class="s2">&gt;= </span><span class="s5">18.5 </span><span class="s2">&amp;&amp; </span><span class="s1">numImc </span><span class="s2">&lt; </span><span class="s5">24.9</span><span class="s2">) {</span>
+                <span class="s1">classificacao </span><span class="s2">= </span><span class="s4">&quot;Peso normal&quot;</span><span class="s2">;</span>
+            <span class="s2">} </span><span class="s0">else if </span><span class="s2">(</span><span class="s1">numImc </span><span class="s2">&gt;=</span><span class="s5">25 </span><span class="s2">&amp;&amp; </span><span class="s1">numImc </span><span class="s2">&lt; </span><span class="s5">29.9</span><span class="s2">) {</span>
+                <span class="s1">classificacao </span><span class="s2">= </span><span class="s4">&quot;Sobrepeso&quot;</span><span class="s2">;</span>
+            <span class="s2">} </span><span class="s0">else if </span><span class="s2">(</span><span class="s1">numImc </span><span class="s2">&gt;=</span><span class="s5">30 </span><span class="s2">&amp;&amp; </span><span class="s1">numImc </span><span class="s2">&lt; </span><span class="s5">34.9</span><span class="s2">) {</span>
+                <span class="s1">classificacao </span><span class="s2">= </span><span class="s4">&quot;Obesidade grau I&quot;</span><span class="s2">;</span>
+            <span class="s2">} </span><span class="s0">else if </span><span class="s2">(</span><span class="s1">numImc </span><span class="s2">&gt;=</span><span class="s5">35 </span><span class="s2">&amp;&amp; </span><span class="s1">numImc </span><span class="s2">&lt; </span><span class="s5">39.9</span><span class="s2">) {</span>
+                <span class="s1">classificacao </span><span class="s2">= </span><span class="s4">&quot;Obesidade grau II&quot;</span><span class="s2">;</span>
+            <span class="s2">}</span><span class="s0">else </span><span class="s2">{</span>
+                <span class="s1">classificacao </span><span class="s2">= </span><span class="s4">&quot;Obesidade grau III&quot;</span><span class="s2">;</span>
+            <span class="s2">}</span>
+        <span class="s2">} </span><span class="s0">else if </span><span class="s2">(</span><span class="s1">sexo</span><span class="s2">.</span><span class="s1">equals</span><span class="s2">(</span><span class="s4">&quot;Feminino&quot;</span><span class="s2">)) {</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">numImc </span><span class="s2">&lt; </span><span class="s5">19.1</span><span class="s2">) {</span>
+                <span class="s1">classificacao </span><span class="s2">= </span><span class="s4">&quot;Abaixo do peso&quot;</span><span class="s2">;</span>
+            <span class="s2">} </span><span class="s0">else if </span><span class="s2">(</span><span class="s1">numImc </span><span class="s2">&gt;= </span><span class="s5">19.1 </span><span class="s2">&amp;&amp; </span><span class="s1">numImc </span><span class="s2">&lt; </span><span class="s5">25.8</span><span class="s2">) {</span>
+                <span class="s1">classificacao </span><span class="s2">= </span><span class="s4">&quot;Peso normal&quot;</span><span class="s2">;</span>
+            <span class="s2">} </span><span class="s0">else if </span><span class="s2">(</span><span class="s1">numImc </span><span class="s2">&gt;= </span><span class="s5">25.8 </span><span class="s2">&amp;&amp; </span><span class="s1">numImc </span><span class="s2">&lt; </span><span class="s5">27.3</span><span class="s2">) {</span>
+                <span class="s1">classificacao </span><span class="s2">= </span><span class="s4">&quot;Sobrepeso&quot;</span><span class="s2">;</span>
+            <span class="s2">} </span><span class="s0">else if </span><span class="s2">(</span><span class="s1">numImc </span><span class="s2">&gt;= </span><span class="s5">27.3 </span><span class="s2">&amp;&amp; </span><span class="s1">numImc </span><span class="s2">&lt; </span><span class="s5">32.3</span><span class="s2">) {</span>
+                <span class="s1">classificacao </span><span class="s2">= </span><span class="s4">&quot;Obesidade grau I&quot;</span><span class="s2">;</span>
+            <span class="s2">} </span><span class="s0">else if </span><span class="s2">(</span><span class="s1">numImc </span><span class="s2">&gt;= </span><span class="s5">32.3 </span><span class="s2">&amp;&amp; </span><span class="s1">numImc </span><span class="s2">&lt; </span><span class="s5">37.0</span><span class="s2">) {  </span><span class="s3">// Completei a faixa que estava faltando</span>
+                <span class="s1">classificacao </span><span class="s2">= </span><span class="s4">&quot;Obesidade grau II&quot;</span><span class="s2">;</span>
+            <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+                <span class="s1">classificacao </span><span class="s2">= </span><span class="s4">&quot;Obesidade grau III&quot;</span><span class="s2">;</span>
+            <span class="s2">}</span>
+        <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+            <span class="s1">classificacao </span><span class="s2">= </span><span class="s4">&quot;Sexo Invalido&quot;</span><span class="s2">;</span>
+        <span class="s2">}</span>
+            <span class="s1">resultado2</span><span class="s2">.</span><span class="s1">setText</span><span class="s2">(</span><span class="s1">classificacao</span><span class="s2">);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+
+
+    <span class="s0">public void </span><span class="s1">limpaDados</span><span class="s2">(</span><span class="s1">View view</span><span class="s2">){</span>
+        <span class="s1">TextInputEditText campoNome </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">textinputNome</span><span class="s2">);</span>
+        <span class="s1">TextInputEditText campoPeso </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">textInputPeso</span><span class="s2">);</span>
+        <span class="s1">TextInputEditText campoSexo </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">textInputSexo</span><span class="s2">);</span>
+        <span class="s1">TextInputEditText campoAltura </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">textinputAltura</span><span class="s2">);</span>
+        <span class="s1">TextView resultado1 </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">textResultado1</span><span class="s2">);</span>
+        <span class="s1">TextView resultado2 </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">textResultado2</span><span class="s2">);</span>
+
+
+        <span class="s1">campoNome</span><span class="s2">.</span><span class="s1">setText</span><span class="s2">(</span><span class="s4">&quot;&quot;</span><span class="s2">);</span>
+        <span class="s1">campoPeso</span><span class="s2">.</span><span class="s1">setText</span><span class="s2">(</span><span class="s4">&quot;&quot;</span><span class="s2">);</span>
+        <span class="s1">campoSexo</span><span class="s2">.</span><span class="s1">setText</span><span class="s2">(</span><span class="s4">&quot;&quot;</span><span class="s2">);</span>
+        <span class="s1">campoAltura</span><span class="s2">.</span><span class="s1">setText</span><span class="s2">(</span><span class="s4">&quot;&quot;</span><span class="s2">);</span>
+        <span class="s1">resultado1</span><span class="s2">.</span><span class="s1">setText</span><span class="s2">(</span><span class="s4">&quot;&quot;</span><span class="s2">);</span>
+        <span class="s1">resultado2</span><span class="s2">.</span><span class="s1">setText</span><span class="s2">(</span><span class="s4">&quot;&quot;</span><span class="s2">);</span>
+        <span class="s2">}</span>
+
+    <span class="s2">}</span>
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="40dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CALCULA IMC"
+            android:textAlignment="center"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/espaço1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="20dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textEditNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textinputNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Digite Seu Nome"
+                android:inputType="text" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textEditSexo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputSexo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Informe seu Sexo" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textEditPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputPeso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite seu Peso"
+                    android:inputType="text" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textEditAltura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textinputAltura"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Digite sua Altura"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20sp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/será"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btncalc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="calculaImc"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="CALCULAR" />
+
+            <Button
+                android:id="@+id/btnLimpar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="limpaDados"
+                android:text="LIMPAR" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/espaço"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textResultado1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="20dp"
+                android:text="RESULTADO DO IMC"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textResultado2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="Seu indice é:"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
